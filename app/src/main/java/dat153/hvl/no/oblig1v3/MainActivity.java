@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        setDefaultData();//Test
+        setDefaultData();
     }
 
     public void onClickNames(View v) {
@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setDefaultData() {
-        ((GlobalClass) this.getApplication()).addName("Daniel");
+        ((GlobalClass) this.getApplication()).addName("Daniel", "android.resource://dat153.hvl.no.oblig1v3/drawable/daniel");
+        ((GlobalClass) this.getApplication()).addName("Oskar", "android.resource://dat153.hvl.no.oblig1v3/drawable/oskar");
+        ((GlobalClass) this.getApplication()).addName("Abdella", "android.resource://dat153.hvl.no.oblig1v3/drawable/abdella");
     }
 }

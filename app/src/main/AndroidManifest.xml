@@ -19,7 +19,8 @@
         </activity>
         <activity android:name=".NamesActivity" />
         <activity android:name=".PicturesActivity" />
-        <activity android:name=".LearningActivity"></activity>
+        <activity android:name=".LearningActivity" />
+        <activity android:name=".ShowAnswerActivity"></activity>
     </application>
 
 </manifest>
