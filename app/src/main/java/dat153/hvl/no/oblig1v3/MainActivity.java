@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        setDefaultData();
+        setDefaultData();//Test
     }
 
     public void onClickNames(View v) {
