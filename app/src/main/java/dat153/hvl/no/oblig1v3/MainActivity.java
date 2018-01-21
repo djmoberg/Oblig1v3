@@ -28,6 +28,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this, LearningActivity.class));
     }
 
+    public void onClickAddPerson(View v) {
+        startActivity(new Intent(this, AddPersonActivity.class));
+    }
+
     private void setDefaultData() {
         ((GlobalClass) this.getApplication()).addName("Daniel", "android.resource://dat153.hvl.no.oblig1v3/drawable/daniel");
         ((GlobalClass) this.getApplication()).addName("Oskar", "android.resource://dat153.hvl.no.oblig1v3/drawable/oskar");

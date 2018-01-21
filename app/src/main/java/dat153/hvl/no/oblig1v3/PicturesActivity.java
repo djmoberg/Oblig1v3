@@ -1,6 +1,9 @@
 package dat153.hvl.no.oblig1v3;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +13,8 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.ArrayList;
 
 public class PicturesActivity extends AppCompatActivity {
@@ -30,7 +35,17 @@ public class PicturesActivity extends AppCompatActivity {
         for (int i = 0; i < names.size(); i++) {
             ImageView imageView = new ImageView(this);
             imageView.setLayoutParams(new LinearLayout.LayoutParams(600, 600));
-            imageView.setImageBitmap(((GlobalClass) this.getApplication()).getBitmap(names.get(i)));
+
+            Uri uri = ((GlobalClass) this.getApplication()).getUri(names.get(i));
+
+            InputStream is = null;
+            try {
+                is = getApplicationContext().getContentResolver().openInputStream(uri);
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+            Bitmap bm = BitmapFactory.decodeStream(is);
+            imageView.setImageBitmap(bm);
 
             final int finalI = i;
             imageView.setOnClickListener(new View.OnClickListener() {

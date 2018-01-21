@@ -18,6 +18,10 @@ public class ShowAnswerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_answer);
 
+        showAnswer();
+    }
+
+    private void showAnswer() {
         String name = getIntent().getStringExtra("name");
 
         TextView tv = (TextView) findViewById(R.id.textView2);

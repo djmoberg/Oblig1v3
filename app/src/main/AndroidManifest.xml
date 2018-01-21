@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="dat153.hvl.no.oblig1v3">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL" />
+    <uses-permission android:name="android.permission.MANAGE_DOCUMENTS" />
+
     <application
         android:name=".GlobalClass"
         android:allowBackup="true"
@@ -20,7 +25,8 @@
         <activity android:name=".NamesActivity" />
         <activity android:name=".PicturesActivity" />
         <activity android:name=".LearningActivity" />
-        <activity android:name=".ShowAnswerActivity"></activity>
+        <activity android:name=".ShowAnswerActivity" />
+        <activity android:name=".AddPersonActivity"></activity>
     </application>
 
 </manifest>

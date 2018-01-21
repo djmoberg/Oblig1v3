@@ -36,11 +36,15 @@ public class GlobalClass extends Application {
         names.put(name, uri);
     }
 
+    public void addNameUri(String name, Uri uri) {
+        names.put(name, uri);
+    }
+
     public Uri getUri(String name) {
         return names.get(name);
     }
 
-    public Bitmap getBitmap(String name) {
+/*    public Bitmap getBitmap(String name) {
         Uri uri = getUri(name);
 
         InputStream is = null;
@@ -50,5 +54,5 @@ public class GlobalClass extends Application {
             e.printStackTrace();
         }
         return BitmapFactory.decodeStream(is);
-    }
+    }*/
 }
